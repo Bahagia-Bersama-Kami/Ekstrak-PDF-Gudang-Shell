@@ -1,6 +1,5 @@
 import openpyxl
 import os
-import glob
 import shutil
 from datetime import datetime
 from copy import copy
@@ -55,17 +54,10 @@ def apply_header_structure(sheet, start_row):
 def main():
     source_file = "Hasil_Ekstrak_temp.xlsx"
     template_file = "TEMPLATE.xlsx"
+    target_file = "TEMPLATE_temp.xlsx"
     
-    shell_files = glob.glob("Laporan SHELL*.xlsx")
-    target_file = ""
-    
-    if shell_files:
-        target_file = shell_files[0]
-        print(f"--> File SHELL ditemukan: {target_file}")
-    else:
-        target_file = "TEMPLATE_temp.xlsx"
-        shutil.copy(template_file, target_file)
-        print(f"--> File SHELL tidak ditemukan. Menggunakan TEMPLATE baru: {target_file}")
+    shutil.copy(template_file, target_file)
+    print(f"--> Menggunakan file target: {target_file}")
 
     wb_source = openpyxl.load_workbook(source_file, data_only=True)
     wb_target = openpyxl.load_workbook(target_file)
@@ -94,7 +86,7 @@ def main():
             date_val = row[1]
             date_obj = None
             if isinstance(date_val, str):
-                for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y"):
+                for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%m/%d/%Y"):
                     try:
                         date_obj = datetime.strptime(date_val, fmt)
                         break
