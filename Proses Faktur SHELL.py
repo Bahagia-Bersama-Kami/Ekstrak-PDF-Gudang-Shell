@@ -11,20 +11,23 @@ def print_msg(msg):
 dapur_folder = "Dapur"
 required_files = [
     "1_AmbilLampiranGmail.py",
-    "2_EkstrakPdfShell.py",
-    "3_HelperDeleteDuplicate.py",
-    "4_XlookupData.py",
-    "5_CopyDataToTemplate.py",
-    "6_HelperDeleteTemplateData.py",
-    "6b_HelperDeleteTemplateData.py",
-    "7_HelperMergedSUM.py",
-    "A_JustXlookupData.py",
-    "credentials.json",
-    "CTX.xlsx",
-    "gmail.conf",
-    "gudang.conf",
-    "__init__.py",
-    "TEMPLATE.xlsx"
+	"2_EkstrakPdfShell.py",
+	"3_HelperDeleteDuplicate.py",
+	"4_XlookupData.py",
+	"5_KnifeToOperationFinalData.py",
+	"6_CombineDeleteDuplicateAndSort.py",
+	"7_CopyDataToTemplate.py",
+	"8_HelperDeleteTemplateData.py",
+	"9_HelperMergedSUM.py",
+	"A_JustXlookupData.py",
+	"credentials.json",
+	"CTX.xlsx",
+	"gmail.conf",
+	"gudang.conf",
+	"__init__.py",
+	"TEMPLATE.xlsx",
+	"token.json"
+
 ]
 
 if not os.path.exists(dapur_folder):
@@ -74,13 +77,14 @@ pilihan = input("--> Masukkan pilihan (1/2): ")
 if pilihan == "1":
     scripts = [
         "1_AmbilLampiranGmail.py",
-        "2_EkstrakPdfShell.py",
-        "3_HelperDeleteDuplicate.py",
-        "4_XlookupData.py",
-        "5_CopyDataToTemplate.py",
-        "6_HelperDeleteTemplateData.py",
-        "6b_HelperDeleteTemplateData.py",
-        "7_HelperMergedSUM.py"
+		"2_EkstrakPdfShell.py",
+		"3_HelperDeleteDuplicate.py",
+		"4_XlookupData.py",
+		"5_KnifeToOperationFinalData.py",
+		"6_CombineDeleteDuplicateAndSort.py",
+		"7_CopyDataToTemplate.py",
+		"8_HelperDeleteTemplateData.py",
+		"9_HelperMergedSUM.py"
     ]
     
     for script in scripts:
