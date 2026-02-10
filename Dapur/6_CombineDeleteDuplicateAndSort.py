@@ -68,7 +68,6 @@ def main():
 
         combined_data = existing_data + new_data
         
-        # Hapus Duplikat
         unique_data = []
         seen = set()
         
