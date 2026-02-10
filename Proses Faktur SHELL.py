@@ -16,9 +16,11 @@ required_files = [
 	"4_XlookupData.py",
 	"5_KnifeToOperationFinalData.py",
 	"6_CombineDeleteDuplicateAndSort.py",
-	"7_CopyDataToTemplate.py",
-	"8_HelperDeleteTemplateData.py",
-	"9_HelperMergedSUM.py",
+	"7_HelperDeleteDuplicateFinalData.py",
+	"8_XlookupData.py",
+	"9_CopyDataToTemplate.py",
+	"10_HelperDeleteTemplateData.py",
+	"11_HelperMergedSUM.py",
 	"A_JustXlookupData.py",
 	"credentials.json",
 	"CTX.xlsx",
@@ -27,7 +29,6 @@ required_files = [
 	"__init__.py",
 	"TEMPLATE.xlsx",
 	"token.json"
-
 ]
 
 if not os.path.exists(dapur_folder):
@@ -82,9 +83,11 @@ if pilihan == "1":
 		"4_XlookupData.py",
 		"5_KnifeToOperationFinalData.py",
 		"6_CombineDeleteDuplicateAndSort.py",
-		"7_CopyDataToTemplate.py",
-		"8_HelperDeleteTemplateData.py",
-		"9_HelperMergedSUM.py"
+		"7_HelperDeleteDuplicateFinalData.py",
+		"8_XlookupData.py",
+		"9_CopyDataToTemplate.py",
+		"10_HelperDeleteTemplateData.py",
+		"11_HelperMergedSUM.py"
     ]
     
     for script in scripts:
