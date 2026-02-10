@@ -9,7 +9,7 @@ def clean_excel_data(filename):
         print(f"--> File {filename} tidak ditemukan.")
         return
 
-    check_columns = ['Tanggal', 'No Inv', 'No SJ', 'No PO', 'Tgl FP']
+    check_columns = ['Tanggal', 'No Inv', 'No SJ', 'No PO', 'Tgl FP', 'DPP']
     priority_column = 'No FP'
 
     for sheet in wb.worksheets:
@@ -35,7 +35,6 @@ def clean_excel_data(filename):
                 key_values.append(val if val is not None else "")
             
             key = tuple(key_values)
-            
             no_fp_val = row[headers[priority_column]]
             
             if key not in row_groups:
